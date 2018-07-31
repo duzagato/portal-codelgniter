@@ -1,0 +1,1 @@
+<h2>Notícia criada com sucesso!</h2>
