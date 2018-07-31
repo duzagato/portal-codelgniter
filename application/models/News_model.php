@@ -13,5 +13,18 @@
                 return $query->row_array();
             }
         }
+
+        public function set_news(){
+            $this->load->helper('url');
+            $uri = url_title($this->input->post('title'), 'dash', TRUE);
+
+            $data = array(
+                'title'=>$this->input->post('title'),
+                'uri'=>$uri,
+                'text'=>$this->input->post('text')
+            );
+
+            $this->db->insert('news', $data);
+        }
     }
 ?>
